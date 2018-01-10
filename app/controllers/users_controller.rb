@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    redirect_to root_path
+    redirect_to @user # logs the user in once account is created
   end
 
   def show
